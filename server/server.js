@@ -2,11 +2,9 @@ ServiceConfiguration.configurations.remove({
   service: "google"
 });
 
-// ServiceConfiguration.configurations.insert({
-//   service: "google",
-//   clientId: "***",
-//   secret: "***"
-// });
+ServiceConfiguration.configurations.insert({
+  service: "google",
+});
 
 Accounts.config({
   restrictCreationByEmailDomain: 'blackpixel.com'
@@ -20,4 +18,8 @@ Accounts.onCreateUser(function(options, user) {
   console.log(user);
 
   return user;
+});
+
+Meteor.publish("userData", function () {
+  return Meteor.users.find({_id: this.userId});
 });
