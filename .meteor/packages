@@ -7,5 +7,5 @@ standard-app-packages
 autopublish
 insecure
 accounts-google
-accounts-ui
 service-configuration
+accounts-ui-unstyled
