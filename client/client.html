@@ -5,6 +5,7 @@
 <body>
 <p>{{> user}}</p>
 {{> loginButtons}}
+{{> leaderboard}}
 </body>
 
 <template name="user">
@@ -13,4 +14,19 @@
   {{else}}
     <h1>Herro, prease login.</h1>
   {{/if}}
+</template>
+
+<template name="leaderboard">
+  <div class="leaderboard">
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="player">
+  <div class="player {{selected}}">
+    <span class="name">{{name}}</span>
+    <span class="score">{{score}}</span>
+  </div>
 </template>
