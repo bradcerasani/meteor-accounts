@@ -8,6 +8,6 @@ Template.user.userName = function(){
   }
 }
 
-Template.leaderboard.players = function () {
+Template.directory.designers = function () {
   return Designers.find({}, {sort: {score: -1, name: 1}});
 };

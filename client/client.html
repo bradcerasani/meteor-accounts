@@ -5,7 +5,7 @@
 <body>
 <p>{{> user}}</p>
 {{> loginButtons}}
-{{> leaderboard}}
+{{> directory}}
 </body>
 
 <template name="user">
@@ -16,17 +16,14 @@
   {{/if}}
 </template>
 
-<template name="leaderboard">
-  <div class="leaderboard">
-    {{#each players}}
-      {{> player}}
-    {{/each}}
-  </div>
+<template name="directory">
+  {{#each designers}}
+    {{> designer}}
+  {{/each}}
 </template>
 
-<template name="player">
-  <div class="player {{selected}}">
-    <span class="name">{{name}}</span>
-    <span class="score">{{score}}</span>
+<template name="designer">
+  <div class="designer {{selected}}">
+    <h4 style="display: inline-block">{{score}} </h4> {{name}}
   </div>
 </template>
