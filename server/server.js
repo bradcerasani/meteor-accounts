@@ -5,12 +5,6 @@ Meteor.startup(function() {
   }
 });
 
-ServiceConfiguration.configurations.insert({
-  service: "google",
-  clientId: "***",
-  secret: "***"
-});
-
 Accounts.config({
   restrictCreationByEmailDomain: 'blackpixel.com'
 });
